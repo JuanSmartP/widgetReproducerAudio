@@ -1,22 +1,31 @@
-import 'package:http/http.dart' as http ;
-
-/// The code includes functions to send audio files to a server and retrieve audio files from a server
-/// using HTTP requests in Dart.
-///
-/// Args:
-///   audioFile: The `audioFile` parameter in the `sendAudio` function should be the audio file that you
-/// want to upload to the server. It could be the path to the audio file on your device or the actual
-/// audio data that you want to send.
+import 'package:fluttertest/devices_info.dart';
+import 'package:http/http.dart' as http;
 
 class Peticiones {
 //Enviar audio al servidor
   Future<void> sendAudio(audioFile) async {
     final url = Uri.parse(
-        'https://www.bibloplus.com/~biblop/webservice/EndSubir/upload-file.php');
+        'http://192.168.1.41/phps-api/src/EndSubir/crear-alerta.php');
 
     final response = await http.post(
       url,
-      body: {'data': audioFile, 'codigo': 'ID'},
+      body: {
+        'codigo_panico': '12345676878',
+        'incluye audio': 'AUDIO FILE',
+        'latitud': '6535133163193',
+        'longitud': '13144324234234',
+        'departament': 'magdalena',
+        'municipio': 'santa marta',
+        'codigo_postal': '4780033',
+        'barrio': 'pescaito',
+        'direccion': 'calle falssioni 123',
+        'numero': '73276478328',
+        'marca': productNamee,
+        'modelo': modelnamee,
+        'imei': imei,
+        'fileData': audioFile,
+        'codigo': 'ID'
+      },
     );
 
     print('Archivo Subido con exito  ${response.statusCode}');

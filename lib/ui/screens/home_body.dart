@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fluttertest/devices_info.dart';
 import 'package:fluttertest/domain/bloc/bloc/bloc/record_bloc_bloc.dart';
 import 'package:fluttertest/ui/widgets/custom_reproducer.dart';
 
@@ -100,6 +101,9 @@ class _CustomBodyState extends State<CustomBody> {
                               recordDuration = "$min:$sec";
                             });
                           });
+
+                          getIpDevice();
+                          getImeiDevice();
                         },
                         child: const Icon(Icons.mic),
                       ),

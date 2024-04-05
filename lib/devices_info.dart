@@ -8,7 +8,6 @@ String? modelnamee;
 String? productNamee;
 String? platformVersiion;
 String? imei;
-
 List deviceInfo = [];
 
 Future infoDevice() async {

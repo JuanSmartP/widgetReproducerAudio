@@ -8,7 +8,9 @@ String? modelnamee;
 String? productNamee;
 String? platformVersiion;
 String? imei;
-List deviceInfo = [];
+
+
+
 
 Future infoDevice() async {
   final deviceInfoPlugin = DeviceInfoPlugin();
@@ -24,7 +26,8 @@ Future getIpDevice() async {
   ipAddresss = data['ip'];
 
   print(' IP  ${data['ip']}.');
-  deviceInfo.add(ipAddress);
+
+
 }
 
 Future getImeiDevice() async {
@@ -35,10 +38,7 @@ Future getImeiDevice() async {
   modelnamee = modelName;
   productNamee = productName;
   platformVersiion = platformVersion;
-
-  deviceInfo.add(modelnamee);
-  deviceInfo.add(productNamee);
-  deviceInfo.add(platformVersiion);
+ 
 
   final status = await Permission.phone.status;
 
@@ -46,5 +46,5 @@ Future getImeiDevice() async {
 
   imei = imeiNo;
 
-  deviceInfo.add(imei);
+ 
 }

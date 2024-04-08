@@ -1,6 +1,11 @@
 import 'package:fluttertest/devices_info.dart';
 import 'package:http/http.dart' as http;
 
+
+
+
+
+
 class Peticiones {
 //Enviar audio al servidor
   Future<void> sendAudio(audioFile) async {

@@ -30,7 +30,7 @@ migrate_working_dir/
 .pub-cache/
 .pub/
 /build/
-lib/domain/bloc/bloc/bloc/record_bloc_bloc.dart
+
 # Symbolication related
 app.*.symbols
 
